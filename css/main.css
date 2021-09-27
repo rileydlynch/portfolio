@@ -231,15 +231,27 @@ picture.is-loaded .picture-shadow {
   left: 0;
   top: 0;
   width: 100%;
-  background-image: url("../images/Taichung-countryside.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   opacity: 0.2;
   position: fixed;
   /* animation-name: zoomOut;
   animation-timing-function: ease-out; */
   animation-timing-function: ease-out;
+
+
+}
+.wallpaper::before{
+  background-image: url("../images/Taichung-countryside.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
 }
 
 .wallpaper.is-loaded {
