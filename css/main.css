@@ -227,6 +227,9 @@ picture.is-loaded .picture-shadow {
 
 .wallpaper {
   display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   left: 0;
   top: 0;
@@ -236,22 +239,6 @@ picture.is-loaded .picture-shadow {
   /* animation-name: zoomOut;
   animation-timing-function: ease-out; */
   animation-timing-function: ease-out;
-
-
-}
-.wallpaper::before{
-  background-image: url("../images/Taichung-countryside.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  will-change: transform;
-  z-index: -1;
 }
 
 .wallpaper.is-loaded {
@@ -273,6 +260,9 @@ picture.is-loaded .picture-shadow {
   .about {
     width: 100%;
   }
+  .wallpaper {
+    background-image: url("../images/Taichung-countryside-799.webp");
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -293,5 +283,8 @@ picture.is-loaded .picture-shadow {
   .about {
     flex-grow: 1;
     flex-shrink: 1;
+  }
+  .wallpaper {
+    background-image: url("../images/Taichung-countryside.webp");
   }
 }
