@@ -1,7 +1,4 @@
 html {
-  background-image: linear-gradient(to bottom right, rgb(51, 214, 255), rgb(36, 188, 87, 1));
-  background-attachment: fixed;
-  margin: 0;
   color: #fff;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -144,6 +141,7 @@ button,
   transform-origin: center left;
   width: 24rem;
   animation-name: fillUp;
+  animation-duration: 2500ms;
   animation-delay: 300ms;
 }
 .name {
@@ -237,14 +235,29 @@ picture.is-loaded .picture-shadow {
   width: 100%;
   opacity: 0.2;
   position: fixed;
-  /* animation-name: zoomOut;
-  animation-timing-function: ease-out; */
   animation-timing-function: ease-out;
 }
 
 .wallpaper.is-loaded {
   animation-delay: 1s;
   animation-name: zoomOut;
+}
+/* Below seems to reduce the ugly whitespace that appears at bottom of screen when scrolling down on mobile */
+.gradient {
+  display: block;
+  background-image: linear-gradient(to bottom right, rgb(51, 214, 255), rgb(36, 188, 87, 1));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  will-change: transform;
+  /* above creates a new paint layer */
+  z-index: -1;
 }
 
 @media screen and (max-width: 799px) {
