@@ -261,7 +261,7 @@ picture.is-loaded .picture-shadow {
     width: 100%;
   }
   .wallpaper {
-    background-image: url("../images/Taichung-countryside-799.webp");
+    visibility: hidden;
   }
 }
 
