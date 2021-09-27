@@ -64,7 +64,6 @@ button,
 .about {
   max-width: 26rem;
   margin-top: 30px;
-  overflow-wrap: break-word;
 }
 .button {
   background-color: #fff;
@@ -255,6 +254,9 @@ picture.is-loaded .picture-shadow {
   }
   .side {
     margin-bottom: 3rem;
+    width: 100%;
+  }
+  .about {
     width: 100%;
   }
 }
