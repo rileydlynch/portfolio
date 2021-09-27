@@ -14,13 +14,14 @@ html {
 /* will-change: transform creates a new paint layer */
 html::before {
   content: ' ';
-  position: fixed; 
+  /* position: fixed;  */
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-image: linear-gradient(to bottom right, rgb(51, 214, 255), rgb(36, 188, 87, 1));
   background-size: cover;
+  background-attachment: scroll;
   will-change: transform;
   z-index: -1;
 }
