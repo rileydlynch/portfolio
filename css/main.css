@@ -1,6 +1,8 @@
 html {
   background-image: linear-gradient(to bottom right, rgb(51, 214, 255), rgb(36, 188, 87, 1));
   background-attachment: scroll;
+  background-attachment: fixed;
+  margin: 0;
   color: #fff;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -8,7 +10,7 @@ html {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   min-height: 100vh;
-  min-width: 100%;
+  min-width: 100vw;
   overflow-x: hidden;
   text-shadow: 1px 1px #000;
 }
