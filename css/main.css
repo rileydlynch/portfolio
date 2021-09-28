@@ -62,6 +62,7 @@ a {
   font-family: "Montserrat", "Quicksand", sans-serif;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  clear: both;
 }
 button,
 .social a {
@@ -79,6 +80,7 @@ button,
 .about {
   max-width: 26rem;
   margin-top: 0px;
+  text-align: center;
 }
 .button {
   background-color: #fff;
@@ -148,7 +150,7 @@ button,
   content: "";
   height: 1px;
   margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   transform-origin: center left;
   width: 26rem;
   animation-name: fillUp;
@@ -280,8 +282,11 @@ picture.is-loaded .code-image {
     align-items: center;
     padding: 5rem 3rem;
   }
+  .content2 .side {
+    padding-top: 5.5rem;
+  }
   .side {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     width: 100%;
     margin-top: -4rem;
   }
@@ -307,6 +312,9 @@ picture.is-loaded .code-image {
   }
   .content2 {
     background-image: url("../images/temple.webp");
+  }
+  .content2 .about {
+    margin-top: -2.4rem;
   }
   .side {
     flex-grow: 1;
