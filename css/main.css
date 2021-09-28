@@ -17,6 +17,15 @@ a {
   text-decoration: none;
 }
 
+.content,
+.content2 {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+}
+::selection {
+  background: #00ffaa;
+}
 .wallpaper,
 .picture-shadow,
 .picture-image {
@@ -62,7 +71,7 @@ button,
 
 .about {
   max-width: 26rem;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .button {
   background-color: #fff;
@@ -100,11 +109,6 @@ button,
   animation-name: bounceIn;
   animation-delay: 600ms;
 }
-.content {
-  display: flex;
-  position: relative;
-  min-height: 100vh;
-}
 .description {
   font-size: 1.4rem;
   animation-name: slideUp;
@@ -114,10 +118,10 @@ button,
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: -4rem;
+  margin-top: -10rem;
   max-height: 20rem;
   max-width: 20rem;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 .side p {
   font-size: 1.3rem;
@@ -141,7 +145,7 @@ button,
   transform-origin: center left;
   width: 24rem;
   animation-name: fillUp;
-  animation-duration: 2500ms;
+  animation-duration: 2000ms;
   animation-delay: 300ms;
 }
 .name {
@@ -233,7 +237,7 @@ picture.is-loaded .picture-shadow {
   left: 0;
   top: 0;
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.5;
   position: fixed;
   animation-timing-function: ease-out;
 }
@@ -242,25 +246,11 @@ picture.is-loaded .picture-shadow {
   animation-delay: 1s;
   animation-name: zoomOut;
 }
-/* Below seems to reduce the ugly whitespace that appears at bottom of screen when scrolling down on mobile */
-.gradient {
-  display: block;
-  background-image: linear-gradient(to bottom right, rgb(51, 214, 255), rgb(36, 188, 87, 1));
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  transform: translateZ(0);
-  will-change: transform;
-  /* above creates a new paint layer */
-  z-index: -1;
-}
 
 @media screen and (max-width: 799px) {
+  html {
+    background-color: #00ffaa;
+  }
   .content {
     flex-direction: column;
     justify-content: center;
@@ -268,8 +258,9 @@ picture.is-loaded .picture-shadow {
     padding: 5rem 3rem;
   }
   .side {
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
     width: 100%;
+    margin-top: -4rem;
   }
   .about {
     width: 100%;
@@ -277,14 +268,27 @@ picture.is-loaded .picture-shadow {
   .wallpaper {
     visibility: hidden;
   }
+  .wallpaper2 {
+    visibility: hidden;
+  }
+  .gradient {
+    visibility: hidden;
+  }
 }
 
 @media screen and (min-width: 800px) {
-  .content {
+  .content,
+  .content2 {
     align-items: center;
     justify-content: space-around;
     justify-content: space-evenly;
     padding: 4rem;
+  }
+  .content {
+    background-image: url("../images/Taichung-countryside.webp");
+  }
+  .content2 {
+    background-image: url("../images/temple.webp");
   }
   .side {
     flex-grow: 0;
@@ -293,12 +297,13 @@ picture.is-loaded .picture-shadow {
     margin-left: 4rem;
     order: 2;
     width: 20rem;
+    z-index: 1;
   }
   .about {
     flex-grow: 1;
     flex-shrink: 1;
   }
   .wallpaper {
-    background-image: url("../images/Taichung-countryside.webp");
+    background: linear-gradient(160deg, rgb(51, 214, 255), rgb(36, 188, 87));
   }
 }
