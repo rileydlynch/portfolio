@@ -81,6 +81,7 @@ button,
   max-width: 26rem;
   margin-top: 0px;
   text-align: center;
+  z-index: 1;
 }
 .button {
   background-color: #fff;
@@ -286,9 +287,12 @@ picture.is-loaded .code-image {
     padding-top: 5.5rem;
   }
   .side {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     width: 100%;
     margin-top: -4rem;
+  }
+  .social a {
+    opacity: 1;
   }
   .about {
     width: 100%;
@@ -314,7 +318,7 @@ picture.is-loaded .code-image {
     background-image: url("../images/temple.webp");
   }
   .content2 .about {
-    margin-top: -2.4rem;
+    margin-top: 2.8rem;
   }
   .side {
     flex-grow: 1;
