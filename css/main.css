@@ -23,7 +23,9 @@ a {
   position: relative;
   min-height: 100vh;
 }
-::selection {
+.content p::selection,
+.content h1::selection,
+.content img::selection {
   background: #00ffaa;
 }
 .wallpaper,
@@ -298,6 +300,10 @@ picture.is-loaded .picture-shadow {
     order: 2;
     width: 20rem;
     z-index: 1;
+  }
+  .side p,
+  .side figure {
+    z-index: 2;
   }
   .about {
     flex-grow: 1;
