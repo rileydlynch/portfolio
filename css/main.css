@@ -28,7 +28,8 @@ a {
 .content img::selection {
   background: #00ffaa;
 }
-.wallpaper,
+.gradient,
+.gradient2,
 .picture-shadow,
 .picture-image {
   display: block;
@@ -39,15 +40,18 @@ a {
   opacity: 0;
 }
 
-.wallpaper,
+.gradient,
+.gradient2,
 .picture-shadow,
 .picture-image,
+.code-image,
 .name,
 .job,
 .hr,
 .description,
 .contact,
 .social li {
+  animation-delay: 1ms;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
   animation-fill-mode: both;
@@ -65,7 +69,8 @@ button,
   transition-duration: 500ms;
 }
 .picture-shadow,
-.picture-image {
+.picture-image,
+.code-image {
   animation-duration: 750ms;
   animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
   animation-delay: 500ms;
@@ -145,7 +150,7 @@ button,
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   transform-origin: center left;
-  width: 24rem;
+  width: 26rem;
   animation-name: fillUp;
   animation-duration: 2000ms;
   animation-delay: 300ms;
@@ -164,7 +169,8 @@ button,
 picture.is-loaded .picture-shadow {
   animation-name: picShadow;
 }
-.picture.is-loaded .picture-image {
+.picture.is-loaded .picture-image,
+picture.is-loaded .code-image {
   animation-name: picImage;
 }
 
@@ -173,12 +179,23 @@ picture.is-loaded .picture-shadow {
   background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
   position: absolute;
   top: 10%;
-  /* animation-name: picShadow; */
+  animation-name: picShadow;
+}
+.picture-image, .code-image {
+  position: absolute;
+  animation-name: picImage;
 }
 .picture-image {
   border-radius: 290486px;
-  position: absolute;
-  /* animation-name: picImage; */
+}
+.code-image {
+  border-radius: 30px;
+  display: block;
+  /* height: 100%; */
+  left: 0%;
+  top: 10%;
+  /* width: 100%; */
+  opacity: 0;
 }
 .social {
   display: flex;
@@ -230,7 +247,8 @@ picture.is-loaded .picture-shadow {
   animation-delay: 1.2s;
 }
 
-.wallpaper {
+.gradient,
+.gradient2 {
   display: block;
   background-position: center;
   background-size: cover;
@@ -240,11 +258,11 @@ picture.is-loaded .picture-shadow {
   top: 0;
   width: 100%;
   opacity: 0.5;
-  position: fixed;
+  position: absolute;
   animation-timing-function: ease-out;
 }
 
-.wallpaper.is-loaded {
+.gradient.is-loaded {
   animation-delay: 1s;
   animation-name: zoomOut;
 }
@@ -253,7 +271,10 @@ picture.is-loaded .picture-shadow {
   html {
     background-color: #00ffaa;
   }
-  .content {
+  .hr {
+    width: 16rem;
+  }
+  .content, .content2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -267,13 +288,8 @@ picture.is-loaded .picture-shadow {
   .about {
     width: 100%;
   }
-  .wallpaper {
-    visibility: hidden;
-  }
-  .wallpaper2 {
-    visibility: hidden;
-  }
-  .gradient {
+  .gradient,
+  .gradient2 {
     visibility: hidden;
   }
 }
@@ -293,8 +309,7 @@ picture.is-loaded .picture-shadow {
     background-image: url("../images/temple.webp");
   }
   .side {
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex-grow: 1;
     height: 20rem;
     margin-left: 4rem;
     order: 2;
@@ -306,10 +321,12 @@ picture.is-loaded .picture-shadow {
     z-index: 2;
   }
   .about {
-    flex-grow: 1;
     flex-shrink: 1;
   }
-  .wallpaper {
+  .gradient {
     background: linear-gradient(160deg, rgb(51, 214, 255), rgb(36, 188, 87));
+  }
+  .gradient2 {
+    background: linear-gradient(180deg, rgb(163, 163, 194), rgb(0, 153, 0));
   }
 }

@@ -11,20 +11,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
     <script src="js/main.js"></script>
+    <link href="css/prism.css" rel="stylesheet" />
   </head>
 
     
     <div id="content1" class="content">
-      <!-- <div id="gradient" class="gradient"></div> -->
-      <div id="wallpaper" class="wallpaper"></div>
+      <div id="gradient" class="gradient"></div>
       <aside class="side">
           <figure id="picture" class="picture">
-          <div class="picture-shadow"></div>
-          <img id="pictureImage" class="picture-image"
-              src="images/riley-square.jpg"
-              alt="Portrait of Riley Lynch"
-              width="320"
-              height="320">
+            <div class="picture-shadow"></div>
+            <img id="pictureImage" class="picture-image"
+                src="images/riley-square.jpg"
+                alt="Portrait of Riley Lynch"
+                width="320"
+                height="320">
           </figure>
             <div class="break"></div>
           <p>Chapel Hill, NC</p>
@@ -75,39 +75,20 @@
     </div>
     
     <div id="content2" class="content2">
-      <!-- <aside class="side">
-          <figure id="picture" class="picture">
-          <div class="picture-shadow"></div>
-          <img id="pictureImage" class="picture-image"
-              src="images/riley-square.jpg"
-              alt="Portrait of Riley Lynch"
-              width="320"
-              height="320">
-          </figure>
-            <div class="break"></div>
-          <p>Chapel Hill, NC</p>
-            <div class="break"></div>
-          <p>919-740-3764</p>
-            <div class="break"></div>
-          <p>Sample projects below!</p>
-              <div class="break"></div>
-          <a href="#section2">
-            <i class="fas fa-angle-double-down" style="transform: scale(2,2);margin-top: 30px;"></i>
-          </a>
-      </aside>
+      <div id="gradient2" class="gradient2"></div>
       <main class="about">
           <hr class="hr">
           <h1 class="name">
-          Hi, I'm Riley Lynch
+          REST API
           </h1>
           <p class="job">
-          Fullstack Developer and Administrator
+          Country Data
           </p>
           <hr class="hr">
           <div class="description">
           <p>
-            I'm a Web Administrator currently studying Full Stack Web Development, searching for a Junior 
-            Back-end/Front-end/Full Stack Web Developer position.
+            This API returns a JSON object, either all of the data available on a particular country,
+            or a particular data point, such as their currency symbol.
           </p>
 
           </div>
@@ -129,7 +110,22 @@
                 </a>
               </li>
             </ul>
-      </main> -->
+      </main>
+      <aside class="side">
+        <hr class="hr">
+        <h1 class="name">
+          EXAMPLE QUERY AND RESPONSE:
+          </h1>
+        <hr class="hr">
+        <pre><code class="language-json">apidomain.com/getcountry?country=250</code></pre>
+        <hr class="hr">
+        <pre><code class="language-json">{"returned_data":{"id":250,"name":"Zimbabwe","iso3":"ZWE","iso2":"ZW","numeric_code":"716",
+          "phone_code":"263","capital":"Harare","currency":"ZWL","currency_symbol":"$","tld":".zw",
+          "native":"Zimbabwe","region":"Africa","subregion":"Eastern Africa",
+          "timezones":[{"zoneName":"Africa/Harare","gmtOffset":7200,"gmtOffsetName":"UTC+02:00","abbreviation":"CAT","tzName":"Central Africa Time"}],
+          "translations":{"kr":"짐바브웨","br":"Zimbabwe","pt":"Zimbabué","nl":"Zimbabwe","hr":"Zimbabve","fa":"زیمباوه","de":"Simbabwe","es":"Zimbabue","fr":"Zimbabwe","ja":"ジンバブエ","it":"Zimbabwe","cn":"津巴布韦"},
+          "latitude":"-20.00000000","longitude":"30.00000000","emoji":"🇿🇼","emojiU":"U+1F1FF U+1F1FC"}}</code></pre>
+      </aside>
     </div>
     <body>
     <noscript>
@@ -142,6 +138,6 @@
           }
         </style>
       </noscript>
-      
+      <script src="js/prism.js"></script>
   </body>
 </html>
