@@ -17,15 +17,16 @@ a {
   text-decoration: none;
 }
 
-.content,
-.content2 {
+.intro,
+.nodeapi,
+.discordbot {
   display: flex;
   position: relative;
   min-height: 100vh;
 }
-.content p::selection,
-.content h1::selection,
-.content img::selection {
+.intro p::selection,
+.intro h1::selection,
+.intro img::selection {
   background: #00ffaa;
 }
 .gradient,
@@ -115,6 +116,7 @@ button,
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   vertical-align: top;
   animation-name: bounceIn;
   animation-delay: 600ms;
@@ -127,6 +129,7 @@ button,
 .side {
   display: flex;
   justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
   margin-top: -10rem;
   max-height: 20rem;
@@ -251,10 +254,11 @@ picture.is-loaded .code-image {
 }
 
 .gradient,
-.gradient2 {
+.gradient2,
+.gradient3 {
   display: block;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   height: 100%;
   left: 0;
@@ -274,17 +278,35 @@ picture.is-loaded .code-image {
   html {
     background-color: #00ffaa;
   }
-  .hr {
-    width: 16rem;
+  .address {
+    margin-top: 1.5rem;
   }
-  .content, .content2 {
+  .contact {
+    margin-bottom: 2.5rem;
+  }
+  .hr {
+    width: 100%;
+  }
+  .intro, .nodeapi, .discordbot {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 3rem;
+    padding-top: 5rem;
+    padding-left:  3rem;
+    padding-right: 3rem;
+    padding-bottom: 0rem;
   }
-  .content2 .side {
+  .job {
+    margin-bottom: 1.5rem;
+  }
+  .name {
+    margin-top: 1.5rem;
+  }
+  .nodeapi .discordbot .side {
     padding-top: 5.5rem;
+  }
+  .nodisplay {
+    display: none;
   }
   .side {
     margin-bottom: 6rem;
@@ -296,6 +318,7 @@ picture.is-loaded .code-image {
   }
   .about {
     width: 100%;
+    justify-content: center;
   }
   .gradient,
   .gradient2 {
@@ -304,20 +327,24 @@ picture.is-loaded .code-image {
 }
 
 @media screen and (min-width: 800px) {
-  .content,
-  .content2 {
+  .intro,
+  .nodeapi,
+  .discordbot {
     align-items: center;
     justify-content: space-around;
     justify-content: space-evenly;
     padding: 4rem;
   }
-  .content {
+  .intro {
     background-image: url("../images/Taichung-countryside.webp");
   }
-  .content2 {
+  .discordbot {
+    background-image: url("../images/ivy.webp");
+  }
+  .nodeapi {
     background-image: url("../images/temple.webp");
   }
-  .content2 .about {
+  .nodeapi .discordbot .about {
     margin-top: 2.8rem;
   }
   .side {
@@ -339,6 +366,9 @@ picture.is-loaded .code-image {
     background: linear-gradient(160deg, rgb(51, 214, 255), rgb(36, 188, 87));
   }
   .gradient2 {
+    background: linear-gradient(180deg, rgb(103, 130, 121), rgb(29, 124, 29));
+  }
+  .gradient3 {
     background: linear-gradient(180deg, rgb(163, 163, 194), rgb(0, 153, 0));
   }
 }
