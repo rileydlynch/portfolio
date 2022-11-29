@@ -15,7 +15,7 @@
   </head>
 
     
-    <div id="content1" class="content">
+    <div id="content1" class="intro">
       <div id="gradient" class="gradient"></div>
       <aside class="side">
           <figure id="picture" class="picture">
@@ -27,17 +27,19 @@
                 height="320">
           </figure>
             <div class="break"></div>
-          <p>Chapel Hill, NC</p>
+          <p class="address">Chapel Hill, NC</p>
             <div class="break"></div>
           <p>919-740-3764</p>
             <div class="break"></div>
-          <p>Sample projects below!</p>
-              <div class="break"></div>
-            <ul class="social">
-              <a href="#content2">
-                <i class="fas fa-angle-double-down" style="transform: scale(2,2)"></i>
-              </a>
-            </ul>
+          <div class="nodisplay">
+            <p style="text-align:center">Sample projects below!</p>
+                <div class="break"></div>
+              <ul class="social">
+                <a href="#content2">
+                  <i class="fas fa-angle-double-down" style="transform: scale(2,2)"></i>
+                </a>
+              </ul>
+          </div>
       </aside>
       <main class="about">
           <hr class="hr">
@@ -50,8 +52,7 @@
           <hr class="hr">
           <div class="description">
           <p>
-            I'm a Web Administrator currently studying Full Stack Web Development, searching for a Junior 
-            Back-end/Front-end/Full Stack Web Developer position.
+            I'm a Web developer looking for a .NET developer position.
           </p>
 
           </div>
@@ -76,12 +77,61 @@
       </main>
     </div>
     
-    <div id="content2" class="content2">
+    <div id="content2" class="discordbot">
       <div id="gradient2" class="gradient2"></div>
       <main class="about">
           <hr class="hr">
           <h1 class="name">
-          REST API
+          Discord bot (C#)
+          </h1>
+          <p class="job">
+          DnD Die Roller
+          </p>
+          <hr class="hr">
+          <div class="description">
+          <p>
+            This Discord bot allows DnD players to virtually roll die(s) with between 4 and 20 sides,
+            and returns the value in a Discord message.
+          </p>
+
+          </div>
+          <hr class="hr">
+          <div class="contact">
+            <a class="button" href="https://github.com/Diamond-Devs/Tabletop-dice-roller">
+                See it on Github
+            </a>
+          </div>
+          <hr class="hr">
+          <div class="nodisplay">
+            <p class="description">More sample projects below!</p>
+            <ul class="social">
+              <a href="#content3">
+                <i class="fas fa-angle-double-down" style="transform: scale(2,2)"></i>
+              </a>
+            </ul>
+          </div>
+      </main>
+      <aside class="side">
+        <hr class="hr">
+        <h1 class="name">
+          C# BACKEND EXAMPLE:
+          </h1>
+        <hr class="hr">
+        <pre><code class="language-cs">for (int i = 0; i < discordUserInputString.Length; i++)
+          {
+              rollValues = rollValues + discordUserInputString[i].ToString() + ", ";
+              sumValues += discordUserInputString[i];
+          }
+          await command.RespondAsync(text: rollValues.Remove(rollValues.Length-2)</code></pre>
+      </aside>
+    </div>
+
+    <div id="content3" class="nodeapi">
+      <div id="gradient3" class="gradient3"></div>
+      <main class="about">
+          <hr class="hr">
+          <h1 class="name">
+          REST API (Node.js)
           </h1>
           <p class="job">
           Country Data
@@ -101,12 +151,14 @@
             </a>
           </div>
           <hr class="hr">
-          <p class="description">More sample projects below!</p>
-          <ul class="social">
-            <a href="#content3">
-              <i class="fas fa-angle-double-down" style="transform: scale(2,2)"></i>
-            </a>
-          </ul>
+          <div class="nodisplay">
+            <p class="description">More sample projects below!</p>
+            <ul class="social">
+              <a href="#content3">
+                <i class="fas fa-angle-double-down" style="transform: scale(2,2)"></i>
+              </a>
+            </ul>
+          </div>
       </main>
       <aside class="side">
         <hr class="hr">
